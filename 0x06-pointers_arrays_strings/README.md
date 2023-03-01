@@ -1,1 +1,1 @@
-test pointer and array
+test pointer array and string
