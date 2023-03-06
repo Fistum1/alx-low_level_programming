@@ -1,4 +1,3 @@
-[master 8deebd8] test pointer
- 2 files changed, 25 insertions(+)
- create mode 100644 0x07-pointers_arrays_strings/.2-strchr.c.swp
- create mode 100644 0x07-pointers_arrays_strings/2-strchr.c
+[master 6b8881e] test pointer
+ 2 files changed, 29 insertions(+), 1 deletion(-)
+ create mode 100644 0x07-pointers_arrays_strings/3-strspn.c
