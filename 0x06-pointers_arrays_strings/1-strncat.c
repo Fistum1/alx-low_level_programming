@@ -3,7 +3,6 @@
 
 /**
  * _strncat -  function that concatenates two strings.
- 
  * @n: number.
  * Return: dest.
  */
