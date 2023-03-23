@@ -2,7 +2,6 @@
 
 /**
  * _strcat - function that concatenates two strings.
-
  * Return: dest.
  */
 
