@@ -2,8 +2,7 @@
 
 /**
  * _strcat - function that concatenates two strings.
- * @src: cadena a copiar
- * @dest: destino de la cadena.
+
  * Return: dest.
  */
 
