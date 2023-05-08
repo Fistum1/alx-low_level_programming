@@ -24,3 +24,4 @@ int append_text_to_file(const char* filename1, char* text_content1)
 		return (-1);
 	close(o);
 	return (1);
+}
