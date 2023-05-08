@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* create_buffer(char* file);
-void close_file(int fd);
+char* create_buffer(char* file1);
+void close_file1(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: Name of the file buffer is storing chars.
+ * @file1: Name of the file1 buffer is storing chars.
  * Return: A ptr to the newly-allocated buffer.
  */
 
@@ -28,10 +28,10 @@ char* create_buffer(char* file1)
 }
 
 /**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * close_file1 - Closes file1 descriptors.
+ * @fd: The file1 descriptor to be closed.
  */
-void close_file(int fd1)
+void close_file1(int fd1)
 {
 	int c;
 
@@ -45,7 +45,7 @@ void close_file(int fd1)
 }
 
 /**
- * main - Copies the contents of a file to another file.
+ * main - Copies the contents of a file1 to another file1.
  * @argc: Number of arguments supplied to the program.
  * @argv: Array of ptrs to the arguments.
  *
@@ -59,7 +59,7 @@ int main(int argc1, char* argv1[])
 
 	if (argc1 != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file1_from file1_to\n");
 		exit(97);
 	}
 
@@ -72,7 +72,7 @@ int main(int argc1, char* argv1[])
 		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv1[1]);
+				"Error: Can't read from file1 %s\n", argv1[1]);
 			free(buffer1);
 			exit(98);
 		}
@@ -92,8 +92,8 @@ int main(int argc1, char* argv1[])
 	} while (r > 0);
 
 	free(buffer1);
-	close_file(from);
-	close_file(to);
+	close_file1(from);
+	close_file1(to);
 
 	return (0);
 }
