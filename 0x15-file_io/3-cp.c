@@ -3,12 +3,15 @@
 #include <stdlib.h>
 
 char* create_buffer(char* file);
-void close_file1(int fd);
+void close_file(int fd);
+
 
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
+ * 
+ * create_buffer - Allocates 1024 bytes to a buffer.
  * @file: Name of the file buffer is storing chars.
  * Return: A ptr to the newly-allocated buffer.
+ * 
  */
 
 char* create_buffer(char* file)
@@ -27,11 +30,15 @@ char* create_buffer(char* file)
 	return (buffer);
 }
 
+
 /**
- * close_file1 - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * 
+ * close_file - A close file descriptors.
+ * @fd: File descriptor to be closed.
+ * 
  */
-void close_file1(int fd)
+
+void close_file(int fd)
 {
 	int c;
 
@@ -44,14 +51,22 @@ void close_file1(int fd)
 	}
 }
 
+
 /**
+ * 
  * main - Copies the contents of a file to another file.
  * @argc: Number of arguments supplied to the program.
- * @argv: Array of ptrs to the arguments.
+ * @argv: Array of pointers to the arguments.
  *
  * Return: 0 on success.
- 
+ *
+ * Description: If the argument count is incorrect - exit code 97.
+ *              If file_to or file_from cannot be closed - exit code 100.
+ *              If file_from does not exist or cannot be read - exit code 98.
+ *              If file_to cannot be created or written to - exit code 99.
+ * 
  */
+
 int main(int argc, char* argv[])
 {
 	int from, to, r, w;
@@ -59,7 +74,7 @@ int main(int argc, char* argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file1_from file1_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -92,8 +107,8 @@ int main(int argc, char* argv[])
 	} while (r > 0);
 
 	free(buffer);
-	close_file1(from);
-	close_file1(to);
+	close_file(from);
+	close_file(to);
 
 	return (0);
 }
