@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * 
  *read_textfile -  Reads and prints it to the POSIX standard output.
@@ -37,3 +38,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	return (w);
 }
+
