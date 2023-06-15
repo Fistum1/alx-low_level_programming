@@ -14,7 +14,7 @@
  */
 typedef struct dlistint_s
 {
-    int nx;
+    int n;
     struct dlistint_s *prev;
     struct dlistint_s *next;
 } dlistint_t;

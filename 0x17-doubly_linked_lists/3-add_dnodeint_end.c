@@ -9,7 +9,7 @@
  * Return: The address of the new element or NULL if it failed.
  */
 
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int nx)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node, *last;
 
@@ -21,7 +21,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int nx)
 		return (NULL);
 
 	/* Assigning data to new node */
-	new_node->nx = nx;
+	new_node->n = n;
 
 	/**
 	 * The new node is going to be the last node so make next of it as NULL
