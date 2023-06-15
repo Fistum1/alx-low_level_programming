@@ -3,7 +3,7 @@
 /**
  * insert_dnodeint_at_index - The function that inserts a new node at,
  * a given position.
- * 
+ *
  * @h: A pointer to pointer to the h of linked list.
  * @idx: An index of the list where the new  node should be added.
  * @n: The value of the new node.

@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - The function that adds new node at begininning of a dbly,
  * linked list.
- * 
+ *
  * @head: A pointer to pointer to head of list.
  * @n: A data to be added.
  *

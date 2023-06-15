@@ -3,7 +3,7 @@
 /**
  * dlistint_len - The function that returns the number of elements in a,
  * linked dlistint_t list.
- * 
+ *
  * @h: A poiner to the head of the list
  *
  * Return: The number of elements
