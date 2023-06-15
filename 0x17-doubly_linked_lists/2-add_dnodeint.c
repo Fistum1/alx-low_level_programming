@@ -10,7 +10,7 @@
  * Return: The address of the new element, or NULL if it failed.
  */
 
-dlistint_t *add_dnodeint(dlistint_t **head, const int n1)
+dlistint_t *add_dnodeint(dlistint_t **head, const int nx)
 {
 	dlistint_t *new_node;
 
@@ -22,7 +22,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n1)
 		return (NULL);
 
 	/* Assigning data to new node */
-	new_node->n1 = n1;
+	new_node->nx = nx;
 
 	/* A point next of newNode to the first node of the doubly linked list */
 	new_node->next = *head;

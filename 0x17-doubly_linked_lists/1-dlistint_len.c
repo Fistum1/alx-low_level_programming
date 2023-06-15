@@ -9,15 +9,15 @@
  * Return: The number of elements
  */
 
-size_t dlistint_len(const dlistint_t *h1)
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t count = 0;
 
 	/* while we have a pointer to the list */
-	while (h1 != NULL)
+	while (h != NULL)
 	{
 		count++;
-		h1 = h1->next;
+		h = h->next;
 	}
 	return (count);
 }

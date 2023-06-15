@@ -14,35 +14,35 @@
  * Return:  The address of the new node, or NULL if it failed.
  */
 
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h1, unsigned int idx, int n1)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int nx)
 {
 	dlistint_t *new_node;
 	dlistint_t *head;
-	unsigned int i1;
+	unsigned int i;
 
 	new_node = NULL;
 	if (idx == 0)	/* It inserts node at beginning of list */
-		new_node = add_dnodeint(h1, n1);
+		new_node = add_dnodeint(h, nx);
 	else
 	{
-		head = *h1;
-		i1 = 1;
+		head = *h;
+		i = 1;
 		if (head != NULL)
 			while (head->prev != NULL)
 				head = head->prev;
 		while (head != NULL)
 		{
-			if (i1 == idx)
+			if (i == idx)
 			{
 				/* It inserts note at the end of list */
 				if (head->next == NULL)
-					new_node = add_dnodeint_end(h1, n1);
+					new_node = add_dnodeint_end(h, nx);
 				else
 				{
 					new_node = malloc(sizeof(dlistint_t));
 					if (new_node != NULL)
 					{
-						new_node->n1 = n1;
+						new_node->nx = nx;
 						new_node->next = head->next;
 						new_node->prev = head;
 						head->next->prev = new_node;
@@ -52,7 +52,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h1, unsigned int idx, int n1)
 				break;
 			}
 			head = head->next;
-			i1++;
+			i++;
 		}
 	}
 	return (new_node);

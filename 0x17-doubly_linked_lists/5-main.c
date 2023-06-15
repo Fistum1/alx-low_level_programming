@@ -23,7 +23,7 @@ int main(void)
 	add_dnodeint_end(&head, 1024);
 	print_dlistint(head);
 	node = get_dnodeint_at_index(head, 5);
-	printf("%d\n", node->n1);
+	printf("%d\n", node->nx);
 	free_dlistint(head);
 	head = NULL;
 	return (EXIT_SUCCESS);

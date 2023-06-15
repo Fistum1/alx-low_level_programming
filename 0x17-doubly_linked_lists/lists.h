@@ -14,18 +14,18 @@
  */
 typedef struct dlistint_s
 {
-    int n1;
+    int nx;
     struct dlistint_s *prev;
     struct dlistint_s *next;
 } dlistint_t;
 
-size_t print_dlistint(const dlistint_t *h1);
-size_t dlistint_len(const dlistint_t *h1);
-dlistint_t *add_dnodeint(dlistint_t **head, const int n1);
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n1);
+size_t print_dlistint(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h);
+dlistint_t *add_dnodeint(dlistint_t **head, const int nx);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int nx);
 void free_dlistint(dlistint_t *head);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h1, unsigned int idx, int n1);
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int nx);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 #endif

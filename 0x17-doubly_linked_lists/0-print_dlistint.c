@@ -8,16 +8,16 @@
  * Return: The number of nodes
  */
 
-size_t print_dlistint(const dlistint_t *h1)
+size_t print_dlistint(const dlistint_t *h)
 {
 	size_t count = 0;
 
 	/* while we have a pointer to the list */
-	while (h1 != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n1", h1->n1);
+		printf("%d\n", h->nx);
 		count++;
-		h1 = h1->next;
+		h = h->next;
 	}
 	return (count);
 }

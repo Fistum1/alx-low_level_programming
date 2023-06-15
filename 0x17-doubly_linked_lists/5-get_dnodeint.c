@@ -11,9 +11,9 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int i1;
+	unsigned int i;
 
-	i1 = 0;
+	i = 0;
 
 	/* It checks if head is NULL */
 	if (!head)
@@ -23,9 +23,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	while (head != NULL)
 	{
 		/* It initializes search here */
-		if (i1 == index)
+		if (i == index)
 			break;
-		i1++;
+		i++;
 		/* make head point to next if index is not found */
 		head = head->next;
 	}
