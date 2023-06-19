@@ -13,4 +13,3 @@ int _strlen(char *s)
 	size++;
 	return (size);
 }
-

@@ -12,4 +12,3 @@ int _isalpha(int x)
 	else
 		return (0);
 }
-
